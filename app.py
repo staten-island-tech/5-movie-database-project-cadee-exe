@@ -20,8 +20,11 @@ for index, item in enumerate(data):
 #         print(items["title"], items["year"])
         
 movie = input("pick movie")
-
-if movie == data['title']:
-        print(data["title"])
-else:
-      print(f"{movie} not found")
+if movie == item["title"]:
+    print(item["title"])
+    movie = []
+    movie.append
+    if len(movie) == len(item["title"]):
+        print(f"{movies["title"]}, exists")
+    else:
+        print(f"{movies} not found")
