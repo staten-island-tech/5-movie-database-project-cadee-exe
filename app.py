@@ -23,8 +23,10 @@ movie = input("pick movie")
 if movie == item["title"]:
     print(item["title"])
     movie = []
-    movie.append
+    movie.append(item['title'])
     if len(movie) == len(item["title"]):
         print(f"{movies["title"]}, exists")
     else:
         print(f"{movies} not found")
+     
+        
