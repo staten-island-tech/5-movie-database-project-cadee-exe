@@ -4,8 +4,8 @@ movies = open("./movies.json", encoding="utf8")
 ## create variable "data" that represents the enitre movie list
 data = json.load(movies)
 
-for index, item in enumerate(data):
-    print(index, ":" ,(item)["title"])
+""" for index, item in enumerate(data):
+    print(index, ":" ,(item)["title"]) """
     
 # choice = int(input("Year after?"))
 # choice2 = int(input("Before what year?"))
@@ -17,16 +17,16 @@ for index, item in enumerate(data):
 # choice3=int(input("year?"))
 # for items in data:
 #     if choice3 == items["year"]:
-#         print(items["title"], items["year"])
-        
-movie = input("pick movie")
-if movie == item["title"]:
-    print(item["title"])
-    movie = []
-    movie.append(item['title'])
-    if len(movie) == len(item["title"]):
-        print(f"{movies["title"]}, exists")
-    else:
-        print(f"{movies} not found")
-     
-        
+#        print(items["title"], items["year"])
+def search():
+    like = input("what movie u liek")
+    found = 0
+    for i in data:
+        if like.lower() in i['title'].lower():
+            print(f"{i["title"].lower()} is here")
+            found +=1
+        if found ==0:
+            print("no exist")
+search()
+
+
