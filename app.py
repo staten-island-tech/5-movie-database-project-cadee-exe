@@ -18,15 +18,25 @@ data = json.load(movies)
 # for items in data:
 #     if choice3 == items["year"]:
 #        print(items["title"], items["year"])
-def search():
-    like = input("what movie u liek")
-    found = 0
-    for i in data:
-        if like.lower() in i['title'].lower():
-            print(f"{i["title"].lower()} is here")
-            found +=1
-        if found ==0:
-            print("no exist")
-search()
+# def search():
+#     like = input("what movie u liek")
+#     found = 0
+#     for i in data:
+#         if like.lower() in i['title'].lower():
+#             print(f"{i["title"].lower()} is here")
+#             found +=1
+#         if found == 0:
+#             print("no exist")
+# search()
 
+def genre():
+    genre = input("pick genre")
+    found = 0
+    for item in data:
+        if genre in item['genres']:
+            print(f"{item['title']} is here")
+    found +=1
+    if found == 0:
+        print("no exist")
+genre()
 
